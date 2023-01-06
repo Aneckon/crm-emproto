@@ -1,0 +1,78 @@
+.header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 2px solid #eaeaea;
+  margin-bottom: 60px;
+
+  &__title {
+    width: 100%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 49px;
+
+    color: #454545;
+
+    opacity: 0.8;
+  }
+
+  &__user {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      margin-right: 12px;
+    }
+    &-name {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      color: #000000;
+      opacity: 0.8;
+    }
+    &-role {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      color: #000000;
+      opacity: 0.7;
+    }
+  }
+
+  &__search {
+    position: relative;
+    max-width: 520px;
+    width: 100%;
+    height: 50px;
+
+    margin-left: 236px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 16px;
+      width: 18px;
+      height: 18px;
+      background: url('../../../public/assets/search.svg') no-repeat center;
+    }
+
+    input {
+      width: 100%;
+      height: 100%;
+      background: #f2f2f2;
+      border-radius: 6px;
+      padding: 11px 11px 11px 54px;
+    }
+  }
+}
