@@ -33,7 +33,11 @@ export const Auth = () => {
         <img className="auth__content-logo" src="assets/login-decor/login-logo.svg" alt="" />
         <GoogleLogin
           className="auth__btn"
-          clientId="223707757898-ehbvo6vqq9617iaj73u3mlvpoe4lckr0.apps.googleusercontent.com"
+          clientId={
+            window.origin === 'http://localhost:3000'
+              ? '223707757898-ehbvo6vqq9617iaj73u3mlvpoe4lckr0.apps.googleusercontent.com'
+              : '757424056502-p6dur7pve7equ2u56n7jlirp0aurd6v5.apps.googleusercontent.com'
+          }
           buttonText="Sign up or Sign In with Google"
           onSuccess={onSuccess}
           onFailure={onFailure}

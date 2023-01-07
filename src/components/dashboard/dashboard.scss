@@ -39,6 +39,9 @@
       margin-bottom: 20px;
 
       &__decor {
+        display: flex;
+        align-items: center;
+        
         width: 16px;
         height: 16px;
         border-radius: 50%;
@@ -57,10 +60,7 @@
           font-size: 16px;
           line-height: 24px;
           color: #232323;
-
-          div {
-            margin-right: 10px;
-          }
+          padding-left: 25px;
         }
         span {
           font-style: normal;

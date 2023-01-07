@@ -95,17 +95,16 @@ export const Dashboard = () => {
             <div className="dashboard__panel-item">
               <div className="dashboard__panel-content">
                 {pieColor.map((item) => (
-                  <div className="dashboard__panel-items">
+                  <div key={item.id} className="dashboard__panel-items">
                     <div className="dashboard__panel-items__content">
-                      <p>
-                        <div
-                          style={{
-                            background: item.color,
-                            boxShadow: `0px 0px 5px ${item.bgColor}`,
-                          }}
-                          className="dashboard__panel-items__decor"></div>
-                        {item.name}
-                      </p>
+                      <div
+                        style={{
+                          background: item.color,
+                          boxShadow: `0px 0px 5px ${item.bgColor}`,
+                        }}
+                        className="dashboard__panel-items__decor">
+                        <p>{item.name}</p>
+                      </div>
                       <span>{item.number}</span>
                     </div>
                     <div className="dashboard__panel-items__skills">
